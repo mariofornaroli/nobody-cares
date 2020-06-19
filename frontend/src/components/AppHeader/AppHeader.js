@@ -7,7 +7,10 @@ function AppHeader() {
     const { taskState, taskDispatcher } = useContext(TaskContext);
     return (
         <div className="app-header">
-
+            <button className="fab-btn"
+                onClick={() => taskDispatcher({ type: 'OPEN_ADD_MODAL' })}>
+                +
+                </button>
         </div>
     );
 }

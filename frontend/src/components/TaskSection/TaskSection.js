@@ -9,20 +9,15 @@ function TaskSection() {
     const { taskState, taskDispatcher } = useContext(TaskContext);
     return (
         <>
-            <div className="fab-add-sentence">
-                <button type="button" onClick={() => taskDispatcher({ type: 'OPEN_ADD_MODAL' })}>
-                    Add Sentence
-                </button>
-            </div>
             <div className="container">
                 <div className="task-section">
                     {taskState.isLoading && <h3>Loading...</h3>}
                     <TaskList />
                 </div>
             </div>
-            <AddSentenceModal 
-            show={taskState.addModalShow} 
-            handleClose={() => taskDispatcher({ type: 'CLOSE_ADD_MODAL' })}/>
+            <AddSentenceModal
+                show={taskState.addModalShow}
+                handleClose={() => taskDispatcher({ type: 'CLOSE_ADD_MODAL' })} />
         </>
     );
 }
