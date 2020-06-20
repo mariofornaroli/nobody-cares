@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { TaskContext } from '../../contexts/TaskContext';
 import { addSentences, reloadSentencesList } from './../../utils/http-utils';
+import './AddSentenceForm.scss';
 
 export const AddSentenceForm = () => {
     const { taskDispatcher } = useContext(TaskContext);
@@ -16,7 +17,24 @@ export const AddSentenceForm = () => {
     };
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <div class="modal__content modal__content--active">
+                <div class="modal__text">
+                    <form onSubmit={handleSubmit}>
+                        <div class="form-group">
+                            <input type="text" id="newTask" onChange={(e) => setNewSentence(e.target.value)} />
+                            <label for="input" class="control-label">Frase</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="newTask" onChange={(e) => setNewSentenceAuthor(e.target.value)} />
+                            <label for="input" class="control-label">Fenomeno che l'ha detta</label><i class="bar"></i>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="button"><span>Pubblica</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {/* <form onSubmit={handleSubmit}>
                 <div className="form-item">
                     <label htmlFor="newTask">Sentence</label>
                     <input id="newTask" onChange={(e) => setNewSentence(e.target.value)} />
@@ -29,7 +47,22 @@ export const AddSentenceForm = () => {
                 <div>
                     <button type="submit">Add</button>
                 </div>
-            </form>
+            </form> */}
+
+            {/* <form onSubmit={handleSubmit}>
+                <h1>Aggiungi codesta frase insignificante</h1>
+                <div class="form-group">
+                    <input type="text" id="newTask" onChange={(e) => setNewSentence(e.target.value)} />
+                    <label for="input" class="control-label">Frase</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="newTask" onChange={(e) => setNewSentenceAuthor(e.target.value)} />
+                    <label for="input" class="control-label">Fenomeno che l'ha detta</label><i class="bar"></i>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="button"><span>Pubblica</span></button>
+                </div>
+            </form> */}
         </div>
     )
 }

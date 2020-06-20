@@ -1,3 +1,7 @@
+.task-item {
+  margin-bottom: 1px;
+}
+
 input[type=checkbox] {
   display: none;
 }
@@ -7,7 +11,6 @@ label.task-title {
   height            : 69px;
   width             : 100%;
   display           : block;
-  border-bottom     : 1px solid #2C3E50;
   color             : #fff;
   text-transform    : capitalize;
   font-weight       : 900;
