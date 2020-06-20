@@ -1,6 +1,6 @@
 {
     "env_name": "development",
-    "port": 9092,
+    "port": 8092,
     "mongo": {
         "url": "mongodb://localhost:27017/nobodycares",
         "dbName":"nobodycares"

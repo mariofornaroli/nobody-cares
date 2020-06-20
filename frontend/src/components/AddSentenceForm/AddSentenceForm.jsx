@@ -26,7 +26,7 @@ export const AddSentenceForm = () => {
                         </div>
                         <div class="form-group">
                             <input type="text" id="newTask" onChange={(e) => setNewSentenceAuthor(e.target.value)} />
-                            <label for="input" class="control-label">Fenomeno che l'ha detta</label><i class="bar"></i>
+                            <label for="input" class="control-label">Chi l'ha detta</label><i class="bar"></i>
                         </div>
                         <div class="button-container">
                             <button type="submit" class="button"><span>Pubblica</span></button>
@@ -34,35 +34,6 @@ export const AddSentenceForm = () => {
                     </form>
                 </div>
             </div>
-            {/* <form onSubmit={handleSubmit}>
-                <div className="form-item">
-                    <label htmlFor="newTask">Sentence</label>
-                    <input id="newTask" onChange={(e) => setNewSentence(e.target.value)} />
-                </div>
-                <div className="form-item">
-                    <label htmlFor="newTask">Sentence author</label>
-                    <input id="newTask" onChange={(e) => setNewSentenceAuthor(e.target.value)} />
-                </div>
-
-                <div>
-                    <button type="submit">Add</button>
-                </div>
-            </form> */}
-
-            {/* <form onSubmit={handleSubmit}>
-                <h1>Aggiungi codesta frase insignificante</h1>
-                <div class="form-group">
-                    <input type="text" id="newTask" onChange={(e) => setNewSentence(e.target.value)} />
-                    <label for="input" class="control-label">Frase</label><i class="bar"></i>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="newTask" onChange={(e) => setNewSentenceAuthor(e.target.value)} />
-                    <label for="input" class="control-label">Fenomeno che l'ha detta</label><i class="bar"></i>
-                </div>
-                <div class="button-container">
-                    <button type="submit" class="button"><span>Pubblica</span></button>
-                </div>
-            </form> */}
         </div>
     )
 }
